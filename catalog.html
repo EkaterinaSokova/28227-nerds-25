@@ -25,7 +25,51 @@
   <h1 class="page-title">Магазин готовых шаблонов</h1>
   <section class="filters">
     <h2 class="visually-hidden">Фильтр товаров</h2>
-    <!-- Здесь будет форма -->
+    <form class="filters" method="get" action="https://echo.htmlacademy.ru/">
+      <fieldset>
+        <legend>Сетка:</legend>
+        <ul>
+          <li class="filters-option">
+            <input class="visually-hidden filters-input filters-input-radio" type="radio" name="type" value="adaptive" id="filters-adaptive" checked>
+            <label for="filters-adaptive">Адаптивная</label>
+          </li>
+          <li class="filters-option">
+            <input class="visually-hidden filters-input filters-input-radio" type="radio" name="type" value="fixed" id="filters-fixed">
+            <label for="filters-fixed">Фиксированная</label>
+          </li>
+          <li class="filters-option">
+            <input class="visually-hidden filters-input filters-input-radio" type="radio" name="type" value="rubber" id="filters-rubber">
+            <label for="filters-rubber">Резиновая</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legent>Особенности:</legend>
+          <ul>
+            <li class="filters-option">
+              <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="slider" id="filters-slider" checked>
+              <label for="filters-slider">Слайдер</label>
+            </li>
+            <li class="filters-option">
+              <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="advantage" id="filters-advantage">
+              <label for="filters-advantage">Блок преимуществ</label>
+            </li>
+            <li class="filters-option">
+              <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="news" id="filters-news" checked>
+              <label for="filters-news">Новости</label>
+            </li>
+            <li class="filters-option">
+              <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="gallery" id="filters-gallery">
+              <label for="filters-gallery">Галерея</label>
+            </li>
+            <li class="filters-option">
+              <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="basket" id="filters-basket">
+              <label for="filters-basket">Корзина</label>
+            </li>
+          </ul>
+      </fieldset>
+      <button class="filters-button button" type="submit">ПОКАЗАТЬ</button>
+    </form>
   </section>
   <section class="catalog">
     <h2 class="visually-hidden">Каталог готовых шаблонов</h2>
@@ -52,7 +96,7 @@
           <p>Сайт салона красоты. Для мужчин, да.</p>
           <a href="#" class="button button-buy">9 900 руб.</a>
         </div>
-        <img src="img/img-barbershop.jpg" width="360" height="576" alt="barbershop" class="catalog-item-image"
+        <img src="img/img-barbershop.jpg" width="360" height="576" alt="barbershop" class="catalog-item-image">
       </li>
       <li class="catalog-item">
         <div class="item-info">
@@ -108,8 +152,23 @@
 
 <section class="modal modal-letter">
   <h2>Напишите нам</h2>
-  <!-- Здесь будет форма -->
-  <span class="modal-close">x</span>
+  <form class="letter-form" action="https://echo.htmlacademy.ru/" method="post">
+    <p class="letter-item">
+      <label for="letter-username">Ваше имя:</label><br>
+      <input id="letter-username" type="text" name="username" value="" placeholder="Имя фамилия">
+    </p>
+    <p class="letter-item">
+      <label for="letter-email">Ваш e-mail:</label><br>
+      <input id="letter-email" type="text" name="e-mail" value="" placeholder="email@example.com">
+    </p>
+    <p class="letter-item">
+      <label for="letter-text">Текст письма:</label><br>
+      <textarea id="letter-text" name="text">В свободной форме
+      </textarea>
+    </p>
+    <button class="button" type="submit">ОТПРАВИТЬ</button>
+  </form>
+  <button class="modal-close" type="button">Закрыть</button>
 </section>
 </body>
 </html>

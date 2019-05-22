@@ -63,18 +63,14 @@
         <section class="info">
           <img src="img/index-nerds.png" width="360" height="208" alt="Нердс">
           <h2>с 2004 года Любим точность во всем:</h2>
-          <table class="table-info">
-            <tr>
-              <td>146%</td>
-              <td>100%</td>
-              <td>50%</td>
-            </tr>
-            <tr>
-              <td>Уровень самоотдачи</td>
-              <td>Соблюдение сроков</td>
-              <td>Минимальная предоплата</td>
-            </tr>
-          </table>
+          <dl class="advantages">
+              <dt>146%</dt>
+              <dd>Уровень самоотдачи</dd>
+              <dt>100%</dt>
+              <dd>Соблюдение сроков</dd>
+              <dt>50%</dt>
+              <dd>Минимальная предоплата</dd>
+          </dl>
         </section>
 
         <section class="customers">
@@ -107,8 +103,23 @@
 
       <section class="modal modal-letter">
         <h2>Напишите нам</h2>
-        <!-- Здесь будет форма -->
-        <span class="modal-close">x</span>
+        <form class="letter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="letter-item">
+            <label for="letter-username">Ваше имя:</label><br>
+            <input id="letter-username" type="text" name="username" value="" placeholder="Имя фамилия">
+          </p>
+          <p class="letter-item">
+            <label for="letter-email">Ваш e-mail:</label><br>
+            <input id="letter-email" type="text" name="e-mail" value="" placeholder="email@example.com">
+          </p>
+          <p class="letter-item">
+            <label for="letter-text">Текст письма:</label><br>
+            <textarea id="letter-text" name="text">В свободной форме
+            </textarea>
+          </p>
+          <button class="button" type="submit">ОТПРАВИТЬ</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
       </section>
     </body>
 </html>
