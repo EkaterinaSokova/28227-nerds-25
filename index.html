@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Сайт дизайн-студии Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
      <body>
    <header class="main-header">
      <nav class="main-navigation">
-       <a class="main-logo">
+       <a class="main-logo" href="index.html">
          <img src="img/index-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нердс">
        </a>
        <ul class="site-navigation">
@@ -37,20 +40,20 @@
              <h3>ПРИЛОЖЕНИЯ</h3>
              <img src="img/index-application.png" width="300" height="146" alt="Приложение">
              <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-             <a class="button" href="#">ЗАКАЗАТЬ</a>
+             <a class="button button-green" href="#">ЗАКАЗАТЬ</a>
            </li>
            <li class="services-item">
             <h3>ПРЕЗЕНТАЦИИ</h3>
             <img src="img/index-presentation.png" width="300" height="146" alt="Презентация">
             <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-            <a class="button" href="#">ЗАКАЗАТЬ</a>
+            <a class="button button-yellow" href="#">ЗАКАЗАТЬ</a>
            </li>
          </ul>
        </section>
 
+       <div class="index-columns">
        <section class="company">
-         <h2 class="visually-hidden">О дизайн-студии Нердс</h2>
-         <p><b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b></p>
+         <h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
          <h3>Выполняем заказы на разработку:</h3>
          <ul>
@@ -61,42 +64,45 @@
         </section>
 
         <section class="info">
+          <h2 class="visually-hidden">О дизайн-студии Нердс</h2>
           <img src="img/index-nerds.png" width="360" height="208" alt="Нердс">
-          <h2>с 2004 года Любим точность во всем:</h2>
+          <h3>с 2004 года Любим точность во всем:</h3>
           <dl class="advantages">
-              <dt>146%</dt>
+              <dt class="advantages-item">146%</dt>
               <dd>Уровень самоотдачи</dd>
-              <dt>100%</dt>
+              <dt class="advantages-item">100%</dt>
               <dd>Соблюдение сроков</dd>
-              <dt>50%</dt>
+              <dt class="advantages-item">50%</dt>
               <dd>Минимальная предоплата</dd>
           </dl>
         </section>
-
+      </div>
         <section class="customers">
-          <ul>
-            <li><img src="img/index-htmlacademy.png" width="199" height="68" alt="Логотип HTML Академии"></li>
-            <li><img src="img/index-borodinski.png" width="209" height="90" alt="Логотип Барбершоп Бородински"></li>
-            <li><img src="img/index-pink.png" width="185" height="52" alt="Логотип Pink"></li>
-            <li><img src="img/index-mishka.png" width="173" height="84" alt="Логотип Мишка"></li>
+          <ul class="customers-logo">
+            <li class="customers-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/index-htmlacademy.png" width="199" height="68" alt="Логотип HTML Академии"></a></li>
+            <li class="customers-item"><img src="img/index-borodinski.png" width="209" height="90" alt="Логотип Барбершоп Бородински"></li>
+            <li class="customers-item"><img src="img/index-pink.png" width="185" height="52" alt="Логотип Pink"></li>
+            <li class="customers-item"><img src="img/index-mishka.png" width="173" height="84" alt="Логотип Мишка"></li>
           </ul>
         </section>
       </main>
       <footer class="main-footer">
+        <div class="contacts-list">
         <address class="contacts">
-          <p><b>NЁRDS DESIGN STUDIO</b></p>
+          <p class="adres-title"><b>NЁRDS DESIGN STUDIO</b></p>
           <p>191186, Санкт-Петербург,<br>
              ул. Б. Конюшенная, д. 19/8<br></p>
           <p>тел. +7 (812) 275-75-75</p>
-          <a class="button" href="#">НАПИШИТЕ НАМ</a>
+          <a class="button" href="#">Напишите нам</a>
         </address>
+        </div>
         <div class="footer-social">
           <ul>
             <li><a class="social-button" href="#">Вконтакте</a></li>
             <li><a class="social-button" href="#">Фейсбук</a></li>
             <li><a class="social-button" href="#">Инстаграм</a></li>
           </ul>
-          <p><b>Давайте дружить, это выгодно!</b></p>
+          <p class="social-title"><b>Давайте дружить, это выгодно!</b></p>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </footer>
@@ -114,8 +120,7 @@
           </p>
           <p class="letter-item">
             <label for="letter-text">Текст письма:</label><br>
-            <textarea id="letter-text" name="text">В свободной форме
-            </textarea>
+            <textarea id="letter-text" name="text" placeholder="В свободной форме"></textarea>
           </p>
           <button class="button" type="submit">ОТПРАВИТЬ</button>
         </form>
