@@ -30,7 +30,15 @@ a{
   background-color: #d7373b;
   color: rgba(255, 255, 255, 0.3)
 }
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 .main-navigation{
+  display: flex;
+  margin: 0;
+
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
@@ -40,17 +48,30 @@ a{
   background-color: #eeeeee;
 }
 .main-logo{
+  width: 160px;
+  height: 65px;
+  padding-top: 48px;
+
   opacity: 1;
 }
 .main-logo:hover{
   opacity: 0.8;
 }
 .main-logo:active{
-  opacity: 0.3;
+    opacity: 0.3;
 }
 .site-navigation,
 .user-navigation{
+  align-items: flex-start;
+  flex-direction: row;
+
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+.user-navigation{
+  margin-left: auto;
 }
 .site-navigation a,
 .user-navigation a{
@@ -65,14 +86,36 @@ a{
   color: #000000;
   opacity: 0.3;
 }
+.slider{
+  margin-bottom: 82px;
+  padding: 0;
+  background-color: #eeeeee;
+}
+.title{
+  background-color: #eeeeee;
+  margin: 0;
+  padding-top: 80px;
+}
 .page-title{
     font-size: 55px;
     line-height: 55px;
     font-weight: 700;
     color: #000000;
+    text-align: center;
+}
+.services{
+  margin-bottom: 120px;
 }
 .services-list{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+.services-item{
+  width: 300px;
 }
 .services-item h3{
   font-size: 24px;
@@ -103,7 +146,10 @@ a{
   color: rgba(255, 255, 255, 0.3)
 }
 .index-columns{
-  color: #283136;
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 124px;
 }
 .index-columns h2{
   font-size: 45px;
@@ -112,16 +158,32 @@ a{
   color: #000000;
 }
 .index-columns h3{
+  font-size: 16px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+.company {
+  width: 660px;
+  padding-top: 40px;
+}
+.info {
+  width: 360px;
 }
 .advantages-item{
   font-size: 45px;
   font-weight: 700;
   color: #000000;
 }
+.customers{
+    margin-bottom: 124px;
+}
 .customers-logo{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 .customers-item{
@@ -133,10 +195,16 @@ a{
 .customers-item:active{
   opacity: 0.1;
 }
+.catalog-filter{
+  display: flex;
+  justify-content: space-between;
+}
+.filters{
+  width: 263px;
+}
 .filters fieldset {
   border: none;
 }
-
 .filters legend {
   font-size: 18px;
   line-height: 30px;
@@ -144,13 +212,11 @@ a{
   color: #000000;
   text-transform: uppercase;
 }
-
 .filters ul {
   list-style: none;
   font-size: 16px;
   line-height: 20px;
-  }
-
+}
 .filters-input{
   opacity: 0.4;
 }
@@ -158,19 +224,31 @@ a{
 .filters-input:focus {
   opacity: 1;
 }
-
 .filters-input:disabled + label {
   color: rgba(040, 049, 054, 0.3);
 
   opacity: 0.1;
 }
 .catalog-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 60px;
   list-style: none;
 }
 .catalog-item h3{
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+}
+.catalog-item {
+  width: 360px;
+  margin-bottom: 33px;
+  margin-right: 40px;
+}
+.catalog-item:nth-child(2n) {
+  margin-right: 0;
 }
 .item-info{
   color: #000000;
@@ -198,6 +276,10 @@ a{
   background-color: #d7373b;
 }
 .pagination-list {
+  padding: 0;
+  margin: 0;
+  margin-left: 420px;
+
   list-style: none;
 }
 
@@ -219,22 +301,28 @@ background-color: #ffffff;
 border: 3px solid #dbdbdb;
 
 }
-.main-footer {
-  line-height: 22px;
-  color: #444444;
+.contact-item{
+  height: 308px;
+  width: 319px;
+  background-color: #ffffff;
+
 }
 .contacts-list{
   background-color: #eeeeee;
   background-image: url("../img/map.png");
   background-position: 0 0;
-  background-repeat: repeat;
-}
+  background-repeat: no-repeat;
 
+  padding-top: 56px;
+  padding-left: 141px;
+}
 .contacts{
   line-height: 18px;
   color: #666666;
 
   background-color: #ffffff;
+  padding-top: 55px;
+  padding-left: 50px;
 }
 .adres-title{
   font-size: 18px;
@@ -242,8 +330,23 @@ border: 3px solid #dbdbdb;
   color: #000000;
   text-transform: uppercase;
 }
+.social-contact{
+  display: flex;
+  margin-top: 70px;
+}
+.footer-social {
+  width: 260px;
+  margin-right: 140px;
+}
 .footer-social ul{
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+.social-info{
+  width: 560px;
+  line-height: 22px;
+  color: #444444;
 }
 .social-title{
   font-size: 36px;
