@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Сайт дизайн-студии Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/min.style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -107,7 +107,7 @@
                 <li class="catalog-sort-item"><a href="#">По названию</a></li>
               </ul>
               <div class="catalog-toggle-list">
-                <div class="catalog-toggle catalog-toggle-down"></div>
+                <div class="catalog-toggle catalog-toggle-down catalog-toggle-down-active"></div>
                 <div class="catalog-toggle catalog-toggle-up"></div>
               </div>
             </div>
@@ -178,8 +178,8 @@
           <div class="contact-item">
             <address class="contacts">
               <p class="adres-title"><b>NЁRDS DESIGN STUDIO</b></p>
-              <p>191186, Санкт-Петербург,<br>
-                ул. Б. Конюшенная, д. 19/8<br></p>
+              <p><span class="adres-text">191186, Санкт-Петербург,
+                ул.&nbsp;Б. Конюшенная, д. 19/8</span></p>
               <p>тел. +7 (812) 275-75-75</p>
               <a class="button button-contact" href="contact.html">Напишите нам</a>
             </address>
@@ -219,21 +219,21 @@
       <h2>Напишите нам</h2>
       <form class="letter-form" action="https://echo.htmlacademy.ru/" method="post">
         <p class="letter-item">
-          <label for="letter-username">Ваше имя:</label><br>
-          <input id="letter-username" type="text" name="username" value="" placeholder="Имя фамилия">
+          <label for="letter-username">Ваше имя:</label>
+          <input id="letter-username" type="text" name="username" value="" placeholder="Имя фамилия" required>
         </p>
         <p class="letter-item">
-          <label for="letter-email">Ваш e-mail:</label><br>
-          <input id="letter-email" type="text" name="email" value="" placeholder="email@example.com">
+          <label for="letter-email">Ваш e-mail:</label>
+          <input id="letter-email" type="text" name="email" value="" placeholder="email@example.com" required>
         </p>
         <p class="letter-item">
-            <label for="letter-text">Текст письма:</label><br>
+            <label for="letter-text">Текст письма:</label>
             <textarea id="letter-text" name="text" placeholder="В свободной форме"></textarea>
         </p>
       </form>
       <button class="button button-close" type="submit">ОТПРАВИТЬ</button>
       <button class="modal-close" type="button">Закрыть</button>
     </div>
-    <script src="js/popup.js"></script>
+    <script src="js/min.popup.js"></script>
   </body>
   </html>

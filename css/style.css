@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 1200px;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #283136;
@@ -60,6 +60,7 @@ input[type="radio"].visually-hidden {
 }
 .main-navigation {
   display: flex;
+  align-items: center;
   margin: 0;
   font-size: 16px;
   line-height: 30px;
@@ -71,6 +72,7 @@ input[type="radio"].visually-hidden {
 .main-logo {
   width: 160px;
   height: 65px;
+  padding-left: 10px;
   padding-top: 48px;
   padding-right: 200px;
   opacity: 1;
@@ -106,7 +108,7 @@ input[type="radio"].visually-hidden {
 .site-navigation a,
 .user-navigation a {
   display: block;
-  padding-top: 83px;
+  padding-top: 65px;
   vertical-align: middle;
   color: #000000;
 }
@@ -132,8 +134,8 @@ input[type="radio"].visually-hidden {
 .basket::before {
   content: "";
   position: absolute;
-  top: 88px;
-  left: 25px;
+  top: 70px;
+  left: 15px;
   width: 16px;
   height: 18px;
   background-image: url("../img/cart-icon.svg");
@@ -159,6 +161,7 @@ input[type="radio"].visually-hidden {
 .slider-controls label {
   position: relative;
   display: inline-block;
+  vertical-align: top;
   width: 18px;
   height: 18px;
   padding: 8px;
@@ -225,16 +228,15 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 .slider-item h3 {
-  max-width: 600px;
+  max-width: 520px;
   margin: 0;
   margin-bottom: 27px;
-
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
 }
 .slider-item p {
-  max-width: 430px;
+  max-width: 412px;
   margin: 0;
   margin-bottom: 38px;
 }
@@ -256,7 +258,8 @@ input[type="radio"].visually-hidden {
   padding-bottom: 110px;
 }
 .services {
-  margin-bottom: 120px;
+  margin-bottom: 123px;
+  padding-left: 10px;
 }
 .services-list {
   display: flex;
@@ -269,6 +272,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   width: 300px;
+  padding-right: 55px
 }
 .services-item h3 {
   margin: 0;
@@ -280,7 +284,10 @@ input[type="radio"].visually-hidden {
 }
 .services-item img {
   order: -1;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+}
+.services-text {
+  max-width: 260px;
 }
 .button-red {
   display: block;
@@ -316,7 +323,7 @@ input[type="radio"].visually-hidden {
 .index-columns {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 124px;
+  margin-bottom: 120px;
 }
 .index-columns h2 {
   font-size: 45px;
@@ -325,7 +332,7 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 .index-columns h3 {
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 16px;
   font-weight: 700;
   color: #000000;
@@ -333,7 +340,7 @@ input[type="radio"].visually-hidden {
 }
 .company {
   width: 660px;
-  padding-top: 40px;
+  padding-left: 10px;
 }
 .company li {
   margin-bottom: 25px;
@@ -342,14 +349,12 @@ input[type="radio"].visually-hidden {
 }
 .info {
   width: 360px;
+  padding-left: 10px;
 }
 .advantages {
   display: flex;
   justify-content: space-between;
   margin-top: 46px;
-}
-.advantage-info {
-  padding-right: 25px;
 }
 .advantages-item {
   padding-bottom: 27px;
@@ -363,7 +368,9 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 .customers {
-  margin-bottom: 124px;
+  margin-bottom: 100px;
+  padding-left: 35px;
+  max-width: 1090px;
 }
 .customers-logo {
   display: flex;
@@ -466,7 +473,8 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
   opacity: 0.4;
 }
-.filters-input-radio + label:hover::before, .filters-input-radio:checked + label:hover::after {
+.filters-input-radio + label:hover::before,
+.filters-input-radio:checked + label:hover::after {
   opacity: 1;
 }
 .range-filter {
@@ -522,6 +530,7 @@ input[type="radio"].visually-hidden {
 }
 .price-controls label {
   display: inline-block;
+  vertical-align: top;
   width: 50%;
   font-size: 16px;
   text-transform: uppercase;
@@ -604,13 +613,26 @@ display: flex;
   height: 10px;
   margin-right: 10px;
   background-image: url("../img/sort-down.png");
+  opacity: 0.2;
+
 }
 .catalog-toggle-up {
   width: 11px;
   height: 10px;
   background-image: url("../img/sort-up.png");
   opacity: 0.2;
-  cursor: auto;
+
+}
+.catalog-toggle-down:hover,
+.catalog-toggle-up:hover {
+ opacity: 0.6;
+}
+.catalog-toggle-down:active,
+.catalog-toggle-up:active {
+ opacity: 1;
+}
+.catalog-toggle-down-active {
+  opacity: 1;
 }
 .catalog {
   margin-left: 140px;;
@@ -669,11 +691,13 @@ display: flex;
   margin-top: 350px;
   z-index: 10;
   bottom: 0;
+  overflow:auto;
   display: none;
 }
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 760px;
   padding: 0;
   margin: 0;
   margin-bottom: 60px;
@@ -738,10 +762,13 @@ display: flex;
   background-color: #dfdfdf;
 }
 .pagination-item a:active {
+  color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
 }
 .pagination-item-current a {
- background-image: url("../img/pagination.png");
+  padding: 11px 19px;
+  background-color: #ffffff;
+  border: 2px solid #eeeeee;
 }
 .contact-item {
   height: 308px;
@@ -751,7 +778,7 @@ display: flex;
 .contacts-list {
   width: 100%;
   background-color: #e9e5dc;
-  background-image: url("../img/map.png");
+  background-image: url("../img/map.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
   padding-top: 55px;
@@ -770,6 +797,9 @@ display: flex;
   color: #000000;
   text-transform: uppercase;
 }
+.adres-text{
+  max-width: 201px;
+}
 .button-contact {
   display: block;
   margin-top: 24px;
@@ -779,6 +809,7 @@ display: flex;
   display: flex;
   margin-top: 69px;
   margin-bottom: 69px;
+  padding-left: 10px;
 }
 .footer-social {
   width: 260px;
@@ -899,7 +930,7 @@ display: flex;
   position: absolute;
   width: 19px;
   height: 3px;
-    background-color: rgba(251, 86, 90, 0.3)
+  background-color: rgba(251, 86, 90, 0.3)
 }
 .modal-close::before {
   transform: rotate(45deg);
@@ -909,14 +940,17 @@ display: flex;
 }
 .letter-form{
   display: flex;
- flex-wrap: wrap;
- justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .letter-form input[type="text"],
 .letter-form textarea[name="text"] {
   font: inherit;
   color: #000000;
   border: 2px solid #d7dcde;
+}
+*:focus {
+  outline: none;
 }
 .letter-form input:hover,
 .letter-form textarea:hover {
@@ -927,8 +961,7 @@ display: flex;
   color: #444444;
   border-color: #000000;
 }
-.letter-form input:invalid,
-.letter-form textarea:invalid {
+.letter-form input:required:invalid {
   color: #e74246;
   border-color: #e74246;
 }
@@ -952,6 +985,9 @@ display: flex;
   padding-left: 17px;
   padding-right: 17px;
   padding-bottom: 89px;
+}
+.letter-item label{
+  max-width: 110px;
 }
 .button-close {
   width: 260px;
